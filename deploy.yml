@@ -28,7 +28,7 @@ jobs:
     - name: Upload site files
       uses: actions/upload-pages-artifact@v2
       with:
-        path: my-website  # ✅ This must match the folder containing index.html
+        path: my-website/index.html  # ✅ This must match the folder containing index.html
 
     - name: Deploy to GitHub Pages
       id: deployment
