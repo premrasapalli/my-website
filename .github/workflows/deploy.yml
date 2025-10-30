@@ -19,18 +19,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout source code
-      uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
 
-    - name: Setup GitHub Pages
-      uses: actions/configure-pages@v3
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3
 
-    - name: Upload site files
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: .  # ✅ Your site files (index.html, style.css, script.js) are in the root
+      - name: Upload site files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .  # Your site files (index.html, style.css, script.js) are in the root
 
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
-
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
